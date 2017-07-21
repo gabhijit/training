@@ -1,0 +1,91 @@
+Slide 1:
+
+What is Python
+--------------
+
+Python is a High Level, Interpreted, Weakly Typed(*) Programming language.
+
+
+Slide 1 Notes:
+--------------
+
+High Level : Is a relative term. There are various abstraction levels of a computer system. You can work very close to machines in Assembly languages, or at a slightly higher level of abstraction in languages like C. I'd ideally say C++ is also pretty low level language, but my definition of High/Low level language comes primarily from
+1) What data types are natively supported by languages. Because - this avoids heavy lifting one has to do to perform simple tasks.
+2) what is the Standard Library the language provides. Because standard library is quite in-separable from language or the language is not very useful without a standard library.
+
+Interpreted: Should be fairly easy to understand for people who come from say Java world. The programs written in an Interpreted language are run by an Interpreter first. So an Interpreter provides a kind of "Virtual Machine" an abstraction - over which programs run. The Python interpreter itself can be written in any language - What is most commonly known Python is the C implementation of Python interpreter. So typically you would run Python programs as `python program.py`
+
+
+Weakly Typed: This concept is relatively new for people coming from languages like C/C++/Java and is an important Concept. In languages like C/C++, associated with a variable is typically a "type". eg. you would typically declare something like `int i;` in C. Which means you are telling the compiler that the variable `i` is of type `int`. So compiler can give you an error if you tried to do something like - `i = "hello";`. But in Python you can do following and it is perfectly valid. `i = 10` and then `i = "hello"`. Note: I didnt do anything like `int i = 10`. Natural question then is - is this even useful and why would someone do it? Over the course We'd try to answer this question.
+
+(*) - Even though it is weakly typed (it is possible to implement and enforce strong types.)
+
+Quiz: What would happen if I write a statement like `i = 3 + "Hello World!" and what would happen when we do `i = 3 * "hello world!"`. Answers are unituitive. We'd revisit this again at the end of the module, when we revisit some more features of language.
+
+
+Slide 2:
+
+More About Python
+-----------------
+
+History:
+
+First version of Python appeared in 1991. Written by - Guido van Rossum.
+
+Current Versions:
+
+Currently the development of Python happens in Python Software Foundation, a non-profit organization and it's current releases are
+
+Python2 : Python 2.7.11
+Python3 : Python 3.6.1
+
+A word about Python 2 Vs Python 3.
+
+Normally we shouldn't care much about Python2 vs. Python3 for the job at hand. Best to start with Python 3 for new Projects, but keep in mind what a distribution supports. All new distributions support both Python2 and Python3.
+
+Where Python is Used:
+
+Application Development : OpenStack
+Web Development : Django
+Data Science/Machine learning : Pandas, Scikit-learn, NLTK
+
+Notes:
+
+Differences Between Python 2 and Python 3.
+
+`print` is not a keyword anymore but a function.
+
+Division like 3/2 works as expected more intuitively.
+
+bytes vs. str
+
+
+Slide 3:
+--------
+
+The Python interpreter - A simple hands on session on Python interpreter.
+
+Sliode 3 Notes:
+
+simple calculator
+
+1 + 2
+
+import math
+
+math.sin(math.pi)
+
+math.sin(math.pi/2)
+
+import requests
+
+help(requests.get)
+
+dir()
+
+globals()
+
+
+---- break ----
+
+

@@ -1,0 +1,120 @@
+slide 1:
+
+Anatomy of a Python Program
+
+* Modules
+* Functions
+* Classes
+* Comments
+* Simple Tests in a module.
+
+Notes on Slide 1:
+
+Show a proper program - to explain all the features of a Python Program.
+
+Single line comments vs. multiple line comments
+
+Comments
+--------
+# This is a single line comment
+
+"""This is a comment that spans multiple lines. Such comments are often used as 'docstring's.
+For example for providing documentation. You can use a single quote (') or a double quote (")
+without a problem. But if you need to use three quotes (such occassions are rather rare.)
+You should have to escape them with a backslash (\). eg. \"\"\".
+"""
+
+Indentation
+-----------
+One of the quirks of Python.
+
+Typically a python file ending with .py extension is a python `module`. Python applications are structured as `packages` and `modules`. Each `package` can contain multiple modules. When we do `import xxx` we are importing all the `global` definitions from that module into our current module.
+
+In the hands on example, we'll see a simple demonstration of this.
+
+Let's open the file /usr/lib/python2.7/zipfile.py - for a demonstration of all what we discussed above.
+
+
+
+
+slides 2:
+
+ * lists
+ * dictionaries
+ * tuples
+ * sets
+
+Notes on Slides 2:
+
+list : Think of it as C arrays, but main difference is - this is an array of Objects, in C arrays are all of the same type. Following are perfectly valid examples of lists
+
+l = [ 1, 2, 3]
+l = ["hello", 1, MyObject] # MyObject is an instance of a user defined class.
+
+List accesses :
+
+l[0] : Indices starting from zero.
+len(l) :
+
+l[:-1] : everything but last
+l[-1:] : last element as a list
+l[-1] : just last element
+
+l.pop(idx) : Pop's the idx'th element. When not specified last (ie. -1)
+l.append(100) : Adds an element to the end of the list
+l.insert(idx, val) :
+
+iterating over a list
+
+for i in l :
+    # do something with i
+    print i
+
+dictionaries : Think of this as hash tables or key-value data structure - a very useful datastructure.
+
+Anything that can be 'hash'ed can be a dictionary key (eg. tuples, integers, strings - but not lists)
+
+valid dictionary :
+
+d = { 0 : 1, (0,10): 11, "hello" : "world"}
+
+>>> d[[1,2]] = 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+
+So dictionaries are indeed 'hash tables'
+
+some interesting dictionary functions are d.keys(), d.values()
+
+We are going to re-visit dictionary a lot later. Just important to keep this useful datastructure in mind for now.
+
+
+tuples:
+
+Someone might ask - why tuples if we already have 'lists'? Many reasons - tuples offer some 'structure', whereas lists are mere collections. Tuples can not be modified once created, hashable and can act as keys in dictionaries. One most important use of tuples that I have found is - named-tuples. Where you have a structure enforced, but don't need to do a full class.
+
+sets:
+
+Collection of unique elements - no duplicates, one of the under appreciated and very powerful data structures. Let's take an example - A very simple one - you have an unsorted list of elements and you've to remove duplicates from the list. The solution is very simple -
+
+list(set(original_list))
+
+Note: There is one small problem with the above - Guess?
+
+
+Slide 3:
+  Constructs
+   * if/elif/else
+   * for
+   * while (no do-while)
+   * with
+   * try/catch
+
+Slide 3 notes:
+
+Most of these things are self explanatory, let's do some simple example
+
+Write a simple program that prints following - takes input from a user a number and prints "Ding" if it's divisible by 5, "Dong" if it's divisible by 3 and Nothing otherwise and "DingDong" if it is divisible by both.
+
+

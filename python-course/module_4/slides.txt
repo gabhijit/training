@@ -1,0 +1,72 @@
+Slide 1
+-------
+
+ * Motivating Example - Birthday Paradox
+
+
+Slide 1 Notes
+-------------
+
+Through this example what we are going to see how numpy makes numerical computations very fast and is the basis of pandas and then we will explore pandas. Start with a simple matplotlib example as well.
+
+
+Slide 2
+--------
+Pandas Basic Data Structures
+
+ * Series
+ * DataFrame
+
+Slide 2 Notes:
+--------------
+
+Series is like a one dimensional array with index
+
+Data Frame is 2 dimensional Array with Index
+
+Best is to try some hands on with data -
+
+Let's play with some random data - we'd understand the following concepts
+
+Indexing
+
+Selection
+
+Two very basic concepts in Pandas. Let's look at them
+
+Indexing: Any series -
+1. pd.date_range('20110101', periods=10, frequency='W') # Note: Starting with Sunday
+2. Any array : Even something like [None, 1, 3, 0, 2] or [None, 1, 3, 1, 2]
+
+
+Selection: Main thing to remember about Selection is following options
+
+.iloc : Integer position based starting from zero
+.loc : Lookup index
+[] : Usual [] should be mainly used for slicing, use loc, iloc whenever applicable
+[condition] : Boolean Condition
+
+
+Merging and Grouping
+--------------------
+
+We are going to use movielens data. This part of the tutorial is inspired by
+
+http://www.gregreda.com/2013/10/26/using-pandas-on-the-movielens-dataset/
+
+We are going to try to answer the following questions - using techniques from Pandas
+
+1. What is the distribution of users ages in the dataset? (simple histogram)
+2. What is mean, median, mode, min and max age for the data in the group?
+3. What is the distribution of users ages for females?
+4. Which movie is most famous amongst 'men' and 'women'?
+5. Which movie has got maximum number of ratings or which movie is the most famous one?
+6. Which movie has got the maximum number of 5 ratings?
+7. Which are the top 10 movies with average rating and minimum ratings are 100?
+
+We'll learn concepts as we try to find answers to the questions above.
+
+
+Simple statistics about data, Merging, Grouping
+
+

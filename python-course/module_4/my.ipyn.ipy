@@ -1,0 +1,30 @@
+# coding: utf-8
+
+import pandas as pd
+import numpy as np
+d = pd.DataFrame(np.random.randn(6,4))
+d.columns = ['A', 'B', 'C', 'D']
+d.T
+d['A']
+d['A'].max()
+d['A']
+d['A'] < 0
+d[d['A'] < 0]
+d[d['A'] > 0][d['B'] > 0]
+d[d['A'] > 0][d['C'] > 0]
+
+# date ranges
+pd.date_range
+pd.date_range('20150101', periods=5)
+pd.date_range('20150101', periods=5, freq='W')
+dates = pd.date_range('20150101', periods=5, freq='W')
+d2 = pd.DataFrame(np.random.randn(5,3), index=dates)
+
+dates = pd.date_range('20150101', periods=50, freq='D')
+d2 = pd.DataFrame(np.random.randn(50,3), index=dates)
+
+from matplotlib import pyplot as plt
+plt.figure(); d.plot(); plt.legend(loc='best')
+plt.show()
+plt.figure(); d2.plot(); plt.legend(loc='best')
+plt.show()

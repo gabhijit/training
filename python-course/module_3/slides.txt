@@ -1,0 +1,7 @@
+Slide 1:
+
+Let's do some simple data analysis program -
+
+We have an Apache Log File, Let's use Python to answer simple questions
+
+- Order by
