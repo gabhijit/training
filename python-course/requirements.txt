@@ -5,7 +5,7 @@ decorator==4.0.11
 enum34==1.1.6
 Flask==1.0.0
 functools32==3.2.3.post2
-ipython==5.4.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 itsdangerous==0.24
 Jinja2==2.11.3
